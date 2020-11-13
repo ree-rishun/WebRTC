@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="lib/peerjs.min.js"></script>
+  <button id="button">send</button>
+</head>
+<body>
+  <video id="myVideo" width="400" height="300" autoplay="1" ></video>
+<script type="text/javascript">
+  // ソケットサーバ情報の定義
+  const ws_ip = 'videosock.herokuapp.com'
+  const ws_port = 53365
+
+  // ソケットサーバへの接続
+  const connection = new WebSocket('ws://' + ws_ip + ':' + ws_port + '/');
+
+  document.getElementById("button").onclick = function () {
+    console.log(connection)
+    connection.send('test');
+  };
+</script>
+</body>
+</html>

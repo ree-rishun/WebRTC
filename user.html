@@ -49,7 +49,7 @@
   // create socket
   let socketReady = false
   let ws_ip = 'videosock.herokuapp.com'
-  let socket = new WebSocket('ws://' + ws_ip + '/')
+  let socket = new WebSocket('wss://' + ws_ip + '/')
 
   // socket: channel connected
   socket.onmessage = function (evt) {

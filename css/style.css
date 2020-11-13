@@ -1,0 +1,11 @@
+#video-area {
+  width: 100%;
+  height: auto;
+}
+#video-area video {
+  display: inline-block;
+  width: 50%;
+  height: 35vw;
+}
+
+/*# sourceMappingURL=style.css.map */
